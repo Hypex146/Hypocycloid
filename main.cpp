@@ -1,4 +1,3 @@
-#include <iostream>
 #include "UI.h"
 
 using namespace Hypex_Hypocycloid;

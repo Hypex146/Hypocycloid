@@ -1,7 +1,3 @@
-//
-// Created by Hypex on 12.09.2021.
-//
-
 #include "Hypocycloid.h"
 
 using namespace Hypex_Hypocycloid;
@@ -116,7 +112,7 @@ double Hypocycloid::getCurve(double t) const {
     double rCurve;
     rCurve = (R - r) * pow((pow(r, 2) + pow(d, 2) - 2 * d * r * cos((R * t) / (-r))), 1.5);
     rCurve /= std::abs(pow(-r, 3) + pow(d, 2) * (R - r) - d * r * (R - 2 * r) * cos((R * t) / (-r)));
-    return rCurve;
+    return std::abs(rCurve);
 }
 
 double Hypocycloid::getSectorArea(double t) const {
@@ -127,6 +123,6 @@ double Hypocycloid::getSectorArea(double t) const {
     double S;
     S = (R - r) / 2;
     S *= (R - r + (pow(d, 2) / (-r))) * t - ((-d * (R - 2 * r)) / R) * sin((R * t) / (-r));
-    return S;
+    return std::abs(S);
 }
 

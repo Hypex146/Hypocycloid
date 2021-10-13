@@ -1,7 +1,3 @@
-//
-// Created by Hypex on 12.09.2021.
-//
-
 #ifndef HYPEX_HYPOCYCLOID_H
 #define HYPEX_HYPOCYCLOID_H
 
@@ -47,20 +43,22 @@ namespace Hypex_Hypocycloid {
     private:
         double rStationary, rMoving, a;
 
+        HypocycloidType::Type type;
+
         void updateType();
 
         void checkParameters() const;
 
     public:
-        HypocycloidType::Type type;
-
         Hypocycloid();
 
         Hypocycloid(double rStationary, double rMoving, double a = 1);
 
         Hypocycloid(const Hypocycloid &object) = default;
 
-        ~Hypocycloid() = default;
+        Hypocycloid& operator=(const Hypocycloid &object) = default;
+
+        virtual ~Hypocycloid() = default;
 
         [[nodiscard]] double getRStationary() const;
 

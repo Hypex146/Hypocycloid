@@ -1,7 +1,3 @@
-//
-// Created by vlad_ on 12.09.2021.
-//
-
 #ifndef LAB_2_UI_H
 #define LAB_2_UI_H
 

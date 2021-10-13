@@ -1,7 +1,3 @@
-//
-// Created by vlad_ on 12.09.2021.
-//
-
 #include "UI.h"
 
 using namespace Hypex_Hypocycloid;
@@ -22,9 +18,9 @@ void UI::printMenu() {
 
 int UI::chooseAction(int start, int end) {
     int choice;
+    std::string errMessage;
+    errMessage = "";
     do {
-        std::string errMessage;
-        errMessage = "";
         choice = getValue<int>();
         std::cout << errMessage << std::endl;
         errMessage = "Wrong input! Choice must be > 0 and < 6";
